@@ -15,8 +15,7 @@
   <header id="header">
     <h1>Application Programming Interfaces</h1>
     <p class="tagline">
-      Theory and application of accessing, manipulating, and creating RESTful Web APIs.
-      <span class="extended">Meets Wednesday nights, 6:25-9:05pm, during Fall Semester 2013.</span>
+      Theory and application of accessing, manipulating, and creating RESTful Web APIs. Taught by <a href="#instructor">Professor Karl Stolley</a>.
     </p>
   </header>
 
@@ -565,8 +564,8 @@
   <div id="instructor">
     <h2 class="label">Instructor</h2>
     <div class="content">
-    <h3 class="extended"><a href="http://karlstolley.com/">Prof. Karl Stolley</a></h3>
-    <ul class="extended">
+    <h3 class="preview"><a href="http://karlstolley.com/">Prof. Karl Stolley</a></h3>
+    <ul class="preview">
       <li>karl.stolley@gmail.com</li>
       <li>karlstolley on <a href="http://twitter.com/karlstolley">Twitter</a>,
         <a href="https://alpha.app.net/karlstolley">App.net</a>, &amp;
@@ -581,26 +580,26 @@
   <div id="policies">
     <h2 class="label">Policies</h2>
     <div class="content">
+      <div class="preview">
+        <h3>Course Description</h3>
+        <p>
+          This is a production-intensive course in the theory and applied involvement with
+          Application Programming Interfaces (APIs), especially Web-available APIs for exchanging
+          and mashing up content and data. The course begins with a consideration of the classical
+          sense of APIs: as interfaces into programming languages and libraries, including a
+          consideration of the quality and navigability of documentation. An understanding and
+          command of those APIs will be necessary to more fully explore and manipulate data APIs
+          later in the course. The course concludes with the groundwork necessary to construct,
+          document, and share an API with the outside world, using lightweight data serialization
+          formats (e.g., JSON) and RESTful distributed architecture. Students will have the
+          opportunity to focus on a specific use of APIs, such as visualization, “scraping” for
+          the purposes of creating datasets for research, or building custom and novel visual
+          interfaces for interacting with a particular dataset or service (e.g., App.net).
+          Throughout the course, students will encounter issues of licensing, API request limits,
+          and other legal and ethical issues surrounding terms of service (TOS) and documentation.
+        </p>
+      </div>
       <ol class="extended">
-        <li>
-          <h3>Course Description</h3>
-          <p>
-            This is a production-intensive course in the theory and applied involvement with
-            Application Programming Interfaces (APIs), especially Web-available APIs for exchanging
-            and mashing up content and data. The course begins with a consideration of the classical
-            sense of APIs: as interfaces into programming languages and libraries, including a
-            consideration of the quality and navigability of documentation. An understanding and
-            command of those APIs will be necessary to more fully explore and manipulate data APIs
-            later in the course. The course concludes with the groundwork necessary to construct,
-            document, and share an API with the outside world, using lightweight data serialization
-            formats (e.g., JSON) and RESTful distributed architecture. Students will have the
-            opportunity to focus on a specific use of APIs, such as visualization, “scraping” for
-            the purposes of creating datasets for research, or building custom and novel visual
-            interfaces for interacting with a particular dataset or service (e.g., App.net).
-            Throughout the course, students will encounter issues of licensing, API request limits,
-            and other legal and ethical issues surrounding terms of service (TOS) and documentation.
-          </p>
-        </li>
         <li>
           <h3>Course Goals</h3>
           <ul>
@@ -860,22 +859,22 @@
         futureWeeks[0].addClass('preview is-current').removeClass('extended').attr('id','current-week');
         futureWeeks[1].addClass('preview is-next').removeClass('extended');
 
-        $('#current-week .assigned h4').text('For Next Class (' + $('.is-next h3 small').html() + ')');
+        $('#current-week .assigned h4').html('For Next Class <small>(' + $('.is-next h3 small').html() + ')</small>');
 
-        $('#calendar > h2').html('This Week <a href="#current-week">Show Full Calendar</a>').attr('id','calendar-toggle');
+        $('#calendar > h2').attr('id','calendar-toggle').parent('#calendar').find('.content').append('<a class="button" href="#calendar">More...</a>');
 
-        $('#calendar-toggle').click(function() { $(this).toggleLabel('This Week <a href="#current-week">Show Full Calendar</a>','Full Calendar <a href="#current-week">Show This Week</a>');});
 
       }
 
-      $('#projects > h2').html('Current Project <a href="#projects">Show All Projects</a>').attr('id','projects-toggle');
+      $('#projects > h2').attr('id','projects-toggle').parent('#projects').find('.content').append('<a class="button" href="#projects">More...</a>');
 
-      $('#projects-toggle').click(function() { $(this).toggleLabel('Current Project <a href="#projects">Show All Projects</a>', 'All Projects <a href="#projects">Show Current Project</a>'); });
+      $('#policies > h2').attr('id','policies-toggle').parent('#policies').find('.content').append('<a class="button" href="#policies">More...</a>');
 
       // Show/hide content
-      $('h2.label').click(function() {
+      $('.button').click(function(e) {
         $(this).toggleClass('is-active');
-        $(this).next('.content').toggleClass('is-visible');
+        $(this).toggleLabel('More...','...less.');
+        $(this).closest('.content').toggleClass('is-visible');
       });
 
     });
