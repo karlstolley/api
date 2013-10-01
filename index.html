@@ -405,7 +405,7 @@
   <div id="projects">
     <h2 class="label">Projects</h2>
     <div class="content">
-    <div class="preview">
+    <div class="extended">
       <h3>Project 1: JavaScript Program <small>Due September 18</small></h3>
       <p>
         This project asks you to build a small program in JavaScript that runs in the browser. It
@@ -455,45 +455,99 @@
         </dd>
       </dl>
     </div>
-    <div class="extended">
-      <h3>Project 2: API Data on the Server <small>Due November 6</small></h3>
+    <div class="preview">
+      <h3>Project 2: API Data on the Server <small>Due November 13</small></h3>
       <p>
         The major project of the course. You will develop an application in Node.js that pulls in
-        external data to the server, and pushes down primarily HTML to the client.
+        external data from a third-party API. There is an option as to what kind of
+        application you will build: either a command-line application (e.g., for storing API data
+        for further analysis in another piece of software) or a Web application (e.g., for creating
+        an interface that displays a mashup of data coming from different APIs).
       </p>
-<!--
       <h4>Project Goals</h4>
       <ul class="goals">
         <li>
+          Learn to authenticate to and access third-party APIs in accordance with their host’s terms
+          of service
+        </li>
+        <li>
+          Learn to build an application in Node.js and draw on the community-developed modules
+          available through the Node Package Manager (NPM)
+        </li>
+        <li>
+          Understand and apply techniques for asynchronous, non-blocking I/O
+        </li>
+        <li>
+          Develop a useful and interesting way of manipulating the data from third-party APIs
         </li>
       </ul>
       <h4>Deliverables &amp; Milestones</h4>
       <ol class="deliverables">
         <li>
-          A self-critique memo that evaluates your project and your progress in the class to this
-          point (2-3 paragraphs; submit via email or as a <code>README.md</code> in your GitHub
-          repository for the project)
+          A small demonstration that you are able to pull data from an open API and display it on
+          an HTML page in a Web browser; this should be based on your work for Project 1. Due ASAP.
         </li>
         <li>
-          A GitHub repository of your files
+          A proposal memo that outlines the application that you intend to build, and a week-by-week
+          plan for how you intend to complete it. Due 10/9.
+        </li>
+        <li>
+          A self-critique memo that evaluates your project and your progress in the class to this
+          point (2-3 paragraphs; submit via email or as a <code>README.md</code> in your GitHub
+          repository for the project). Due 11/13.
+        </li>
+        <li>
+          A GitHub repository of your files. Due 11/13.
         </li>
       </ol>
       <h4>Requirements</h4>
       <dl class="requirements">
-        <dt>Your XXX must:</dt>
+        <dt>If you choose to create a <b>CLI application</b>, it must:</dt>
         <dd>
           <ul>
-            <li></li>
+            <li>
+              Do some basic data checks and sanitization to protect against malicious/malformed code
+              originating from third-party sources
+            </li>
+            <li>
+              Be able to run unassisted for long periods of time (e.g., to capture data from an API
+              over a period of hours or days or more)
+            </li>
+            <li>
+              Provide output to the console and/or to log files that indicate its functionality and
+              any errors that it encounters
+            </li>
+            <li>
+              Writes data to a structured set of flat files or to a database or similar data store
+            </li>
+            <li>
+              Include a small test suite to ensure its functionality as you make changes to it
+            </li>
           </ul>
         </dd>
-        <dt>Your YYY must:</dt>
+        <dt>If you choose to create a <b>Web application</b>, it must:</dt>
         <dd>
           <ul>
-            <li></li>
+            <li>
+              Do some basic data checks and sanitization to protect against malicious/malformed code
+              originating from third-party sources
+            </li>
+            <li>
+              Feature some kind of interface to enable a user to interact with or change the data
+            </li>
+            <li>
+              Communicate with the browser using either AJAX or Websockets
+            </li>
+            <li>
+              Deliver to the browser standard forms of HTML5 and CSS; the use of a library such as
+              jQuery is encouraged for DOM scripting tasks
+            </li>
+            <li>
+              Include a small test suite to ensure its functionality as you make changes to it
+            </li>
           </ul>
         </dd>
       </dl>
--->
       <h3>Project 3: Creating a Custom API <small>Due December 5</small></h3>
       <p>
         This project gives you the opportunity to write the specification for an API of an app of
